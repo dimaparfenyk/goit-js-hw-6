@@ -9,3 +9,5 @@ fontSizeControlEl.addEventListener('input', onFontSizeControlChange);
 function onFontSizeControlChange(event) {
     textEl.style.fontSize = `${ event.currentTarget.value }px`;
 };
+
+onFontSizeControlChange()
