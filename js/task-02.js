@@ -11,15 +11,17 @@ const listEl = document.querySelector('#ingredients');
   
 
 function createElement(array) {
-  array.map(element => {
-    const itemEl = document.createElement('li');
+  let newAr = [];
 
-    itemEl.textContent = ([element]);
-    itemEl.classList.add('item');
- 
-    return listEl.appendChild(itemEl);
+  array.map(element => {
+    const el = document.createElement('li');
+
+    el.textContent = ([element]);
+    el.classList.add('item');
+    newAr.push(el)
+   
   });
-  return;
+   listEl.append(...newAr);
   }
 
 createElement(ingredients)

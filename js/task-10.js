@@ -34,5 +34,7 @@ function createBoxes() {
 }
 
 function destroyBoxes() {
- return boxEl.innerHTML ='';
+  
+  return boxEl.
+  
 }
