@@ -17,24 +17,26 @@ function createBoxes() {
   const getInputValue=() => Number(inputEl.value);
  
   let boxes = [];
- const amount = getInputValue();
+  let width = 30;
+  let height = 30;
+  const amount = getInputValue();
   
   for (let i = 1; i <= amount; i ++) {
 
     const color = getRandomHexColor();
-    
     const box = document.createElement('div');
+   
+    width += 10;
+    height += 10;
 
     box.style.backgroundColor = color;
-    box.style.width = 20 + i * 10+'px';
-    box.style.height = 20 + i * 10+'px';
+    box.style.width =width+'px';
+    box.style.height = height+'px';
     boxes.push(box)
   }
   boxEl.append(...boxes)
 }
 
 function destroyBoxes() {
-  
-  return boxEl.
-  
+  return boxEl.innerHTML ='';
 }
